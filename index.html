@@ -1,0 +1,196 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Dressora</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+	<script src="js/libs/selectivizr-min.js"></script>
+
+	<script src="js/libs/live.js#css"></script>
+
+</head>
+<body onload="coverflow.init()">
+
+	<div class="header_bar">
+		<div class="header_bar_nav">
+			<img src="img/dressora-logo.png" />
+
+      <img src="img/facebook-button.png" align="right" style="padding: 7px 0 0 0;" />
+		</div>
+	</div>
+
+	<div id="main" role="main" class="border_guide clearfix">
+
+    	<div class="upper_nav border_guide clearfix">
+    		<ul class="upper_nav_buttons">
+    			<li id="upload_image">Upload an Item</li>
+    			<li id="save_outfit">Save this Outfit</li>
+    			<li id="open_calendar">Calendar</li>
+    		</ul>
+    	</div>
+
+    	<div class="closet border_guide clearfix">
+    		
+    		<div id="dummy">
+			   <img src="img/shirt_01.jpg" />
+			   <img src="img/shirt_02.jpg" />
+			   <img src="img/shirt_03.jpg" />
+			   <img src="img/shirt_04.jpg" />
+			   <img src="img/shirt_01.jpg" />
+			   <img src="img/shirt_02.jpg" />
+			   <img src="img/shirt_03.jpg" />
+			   <img src="img/shirt_04.jpg" />
+			   <img src="img/shirt_01.jpg" />
+  			</div>
+  
+  			<div id="container">
+   				<ul id="coverflow"></ul>
+  			</div>
+
+  			<input id="left" type="button" value="&larr;" />
+  			<input id="right" type="button" value="&rarr;" />
+  
+  			<div id="zoom_container"></div>
+
+        <br />
+
+  			<p align="center">
+  			<img src="img/pants_placeholder.jpg" />
+  			</p>        
+
+  			<p align="center">
+  			<img src="img/shoes_placeholder.jpg" />
+  			</p>
+
+        <div class="comments_box border_guide">
+          <form method="" action="">
+            <textarea rows="6" cols="46" wrap="physical" name="comments" placeholder="Enter some comments about this outfit"></textarea>
+            <input type="submit" value="Comment" style="padding: 10px;" />
+          </form>
+        </div>
+
+    	</div>
+
+    	<div class="ad_sidebar border_guide">
+    		<strong>Recommended for You</strong>
+
+    		<p align="center">
+        <img src="img/recommended_top.png" />
+        </p>
+
+    		<p>
+    			<strong>Amazon</strong><br />
+          Blowfish Women's Naina<br />
+          Price: $29.99 - $42.00<br />
+          <a href="">Add to cart</a>
+    		</p>
+
+        <p align="center">
+        <img src="img/recommended_pants.png" />
+        </p>
+
+        <p>
+          <strong>Amazon</strong><br />
+          Blowfish Women's Naina<br />
+          Price: $29.99 - $42.00<br />
+          <a href="">Add to cart</a>
+        </p>
+
+    		<p align="center">
+    		<img src="img/recommended_shoe.png" />
+    		</p>
+
+        <p>
+          <strong>Amazon</strong><br />
+          Blowfish Women's Naina<br />
+          Price: $29.99 - $42.00<br />
+          <a href="">Add to cart</a>
+        </p>
+    	</div>
+
+	</div>
+
+	<div class="footer_bar">
+    <div class="footer_bar_nav">
+      <div class="footer_copyright">
+        © 2011 Dressora
+      </div>
+    </div>
+  </div>
+
+<script src="js/libs/jquery-1.6.2.min.js"></script>
+
+<script src="js/libs/jquery.colorbox-min.js"></script>
+
+<script>
+  $('#upload_image').colorbox(
+      {
+        html: '<h1>Upload a new article of clothing:</h1>' +
+              '<form>' +
+              '<fieldset>' +
+              '<legend>Upload an image:</legend>' +
+              '<input type="file" name="file" id="file" style="padding: 6px;" /><br />' +
+              '</fieldset>' +
+              '<fieldset>' +
+              '<legend>Tops:</legend>' +
+              '<input type="radio" name="sex" value="penis" /> Blouse &nbsp;&nbsp;&nbsp;' +
+              '<input type="radio" name="sex" value="male" /> Sweater &nbsp;&nbsp;&nbsp;' +
+              '<input type="radio" name="sex" value="male" /> Tank Top' +
+              '</fieldset>' +
+              '<fieldset>' +
+              '<legend>Pants:</legend>' +
+              '<input type="radio" name="sex" value="male" /> Denim &nbsp;&nbsp;&nbsp;' +
+              '<input type="radio" name="sex" value="male" /> Slacks &nbsp;&nbsp;&nbsp;' +
+              '<input type="radio" name="sex" value="male" /> Skirts' +
+              '</fieldset>' +
+              '<fieldset>' +
+              '<legend>Shoes:</legend>' +
+              '<input type="radio" name="sex" value="male" /> Sneakers &nbsp;&nbsp;&nbsp;' +
+              '<input type="radio" name="sex" value="male" /> Pumps &nbsp;&nbsp;&nbsp;' +
+              '<input type="radio" name="sex" value="male" /> Boots' +
+              '</fieldset>' +
+              '<fieldset>' +
+              '<legend>Tags:</legend>' +
+              '<input type="text" name="fname" size="40" placeholder="enter your tags" /><br />' +
+              '</fieldset>' +
+              '<br /><input type="submit" value="Submit" style="padding: 10px;" />' +
+              '</form>'
+      }
+    );
+</script>
+
+<script>
+  $('#save_outfit').colorbox(
+      {
+        html: '<h1>Outfit has been saved.</h1>'
+      }
+    );
+</script>
+
+<script>
+  $('#open_calendar').colorbox(
+      {
+        html: '<img src="img/calendar.jpg" width="330" height="300" />'
+      }
+    );
+</script>
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<!-- end scripts-->
+
+</body>
+</html>
